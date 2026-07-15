@@ -13,8 +13,9 @@ Where change history legitimately belongs:
 - **Git** — every edit to these docs should be a commit with a message describing the change.
 - **Your chat summary** — narrate what changed and why to the user, in conversation.
 - **A changelog or announcement** — if the change is user-facing enough to warrant one, offer to write it as a separate artifact.
+- **The Open Questions log** — a resolved question keeps its answer there, as the record of what was decided and how; this is the one place in the doc where that history is preserved on purpose.
 
-Never inline in the document body. "Now uses X (previously Y)", "no longer supports Z", "instead of the old approach" — each of these is history leaking into specification.
+Never inline in the specification prose. "Now uses X (previously Y)", "no longer supports Z", "instead of the old approach" — each of these is history leaking into the spec body; the sanctioned homes above are where it belongs instead.
 
 ## Edit propagation
 
@@ -25,7 +26,7 @@ A decision never lives in one place. When a design decision changes:
 3. Sweep for echoes: the hero example, "Usable as" bullets, config examples, the tech stack list, and the surfaces table all tend to restate decisions. Grep for the old term across all project docs and fix every occurrence.
 4. If a completed (ticked) story is invalidated by the change, do not untick it silently — surface it to the user: "E2-3 was done against the old design; the change reopens it. Reopen, or add a new story?"
 
-Resolved open questions move: delete them from Open Questions and fold the answer into the owning section. The Open Questions list shrinks toward zero; it never accumulates "RESOLVED:" annotations.
+When an open question is resolved, keep it and record the answer on it — mark it resolved with the decision and the evidence that settled it, rather than deleting it. Still fold that decision into the owning section so the spec body reads as current truth; the resolved question stays in Open Questions as the log of what was asked and how it was decided. The section therefore holds both live questions and settled ones with their answers — it is the project's decision log, not a list that shrinks to nothing.
 
 ## The tick-off protocol (roadmap updates)
 

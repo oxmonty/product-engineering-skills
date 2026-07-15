@@ -278,6 +278,9 @@ internal/ for everything else, tests-as-golden-files, CI check that matters most
 ## Open questions
 
 <!-- Only questions with a forcing function — note what decision each blocks and
-     what evidence (benchmark, availability check, spike) resolves it. Resolved
-     questions move into their section; this list should shrink toward zero by v0.1. -->
+     what evidence (benchmark, availability check, spike) resolves it. When a
+     question is resolved, keep it and record the answer (the decision + the
+     evidence) rather than deleting it, and also fold that decision into the
+     owning section so the spec stays current. This section is the project's
+     decision log — live questions plus settled ones with their answers. -->
 - {{ question }} ({{ what_resolves_it }})
