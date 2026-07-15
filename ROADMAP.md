@@ -31,8 +31,8 @@ Usable as:
     - [x] CI runs check-doc.sh against this repo's own ROADMAP.md and PRD (self-hosting gate)
 
 - [ ] **E3: Create-mode evals** — golden briefs prove the interview produces valid documents without hand-holding. → [Validation strategy](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
-    - [ ] Three golden briefs committed under tests/ (CLI tool, hosted API, library) with expected structural assertions
-    - [ ] Assertions runnable via check-doc.sh plus per-brief expectations (e.g. API section present only for the API brief)
+    - [x] Three golden briefs committed under tests/ (CLI tool, hosted API, library) with expected structural assertions
+    - [x] Assertions runnable via check-doc.sh plus per-brief expectations (e.g. API section present only for the API brief)
     - [ ] One recorded transcript per brief reviewed for question quality: one decision per turn, recommendation always present
 
 - [ ] **E4: Update-mode evals** — the tick protocol and edit propagation behave under test. → [Update-mode workflow](docs/plans/2026-07-15-mvp-roadmap-prd.md#workflow)
