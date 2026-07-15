@@ -1,0 +1,5 @@
+# Packaged skill build artifact — produced by the release workflow, never committed
+*.skill
+
+# macOS
+.DS_Store
