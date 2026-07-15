@@ -149,3 +149,4 @@ MIT. Documents produced by the skill in target projects belong entirely to their
 
 - Does skills.sh index root-level SKILL.md repos without extra manifest metadata? (Resolved by E1's clean-install story — blocks nothing else.)
 - Should `check-doc.sh` ship as a separately-installable script for non-users of the skill? (Resolved by whether anyone asks after v0.1 — blocks nothing; noted because it changes the Distribution section if yes.)
+- Does create mode ask the output-shape choice as the final question, after roadmap synthesis? An api-brief eval run put it one turn early, a Phase 9/10 slip. (Resolved by the cli and library eval runs — a repeat means the decision-tree's closing cue needs sharpening.)
