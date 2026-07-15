@@ -103,7 +103,7 @@ Principles: SKILL.md stays under ~150 lines with depth pushed to references/; sk
 
 Channels: skills.sh (public repo with skills under `skills/` is the discoverable shape — the same layout mattpocock and superpowers ship), and GitHub Releases carrying the packaged `mvp-roadmap.skill` for claude.ai import. Release automation: tag push → package `skills/mvp-roadmap/` → attach artifact.
 
-**Naming note:** the repo lives under the `monthy-app` GitHub org as `monthy-app/mvp-roadmap`; skills.sh addresses by `owner/repo`, so org placement changes the install string and nothing else. The name puts the signature artifact (the living roadmap) in the identifier; no conjunctions, clean as a slash command. No package-registry presence is planned, which removes the usual npm/PyPI check. Verified by the E1 clean-install story rather than by assertion.
+**Naming note:** the repo lives at `oxmonty/mvp-skills`; skills.sh addresses by `owner/repo`, so `npx skills add oxmonty/mvp-skills` is the whole install string and the repo path is the only thing it pins. The repo hosts a single skill, `mvp-roadmap` (`skills/mvp-roadmap/`), invoked as `/mvp-roadmap` — the repo path is just the address; the skill keeps the signature name, clean as a slash command. No package-registry presence is planned, which removes the usual npm/PyPI check. Verified by the E1 clean-install story rather than by assertion.
 
 ## CI/CD
 
