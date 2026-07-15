@@ -20,7 +20,7 @@ The documents ARE the memory. You have no state between sessions; the roadmap's 
 
 Never open with questions. First, gather everything answerable without the user:
 
-1. If there's a repo or codebase, explore it: language, entry points, existing README, package manifests, CI config.
+1. If there's a repo or codebase, explore it: language, entry points, existing README, package manifests, CI config, and the git remotes — an existing `origin` is the repo URL, so take it rather than asking.
 2. Read any prior notes, conversation context, or linked docs the user provided.
 3. For distribution naming, actually check: query the relevant registries (npm, PyPI, crates.io, Homebrew, GitHub org) for name collisions rather than asking the user to.
 
@@ -32,7 +32,7 @@ Follow `references/decision-tree.md`. It maps interview phases to template secti
 
 Interviewing rules (these come from hard-won practice; the whole value of the skill lives here):
 
-- **One decision point at a time.** Use the structured question tool (`AskUserQuestion` in Claude Code, or the platform equivalent) with a single question, or at most two tightly coupled ones. A wall of questions is bewildering and gets shallow answers.
+- **One decision at a time — the rule the interview lives or dies on.** You MUST surface exactly one decision per turn (at most two tightly coupled) through the structured question tool: `AskUserQuestion` in Claude Code, the platform's equivalent where one exists, and a single plain-text question with lettered options on any harness that has neither. Never batch decisions into a wall of questions — it bewilders, draws shallow answers, and turns the interview into a form. The widget is an enhancement; the one-decision-per-turn discipline is mandatory on every harness.
 - **Every question ships with your recommendation.** Never ask an open "what do you want?" when you can propose. Format options as concrete choices, mark one "(recommended)" in its description, and say why in one clause. The user should be able to get a good document by mashing the recommended option repeatedly.
 - **Probe the trade-off, not the preference.** For each decision, name what each option costs. "Library-first or CLI-first?" is weak; "Library-first keeps the CLI a thin wrapper and forces a clean public API, but delays the demo-able moment — CLI-first inverts that. Which loss hurts less?" is the question.
 - **Skip logic is mandatory.** Conditional sections (API design, pipeline model, artifact structure) get zero questions when they don't apply. Infer applicability from earlier answers; confirm with one yes/no only if genuinely ambiguous.

@@ -9,6 +9,7 @@ Throughout: one decision point per question-tool call, always with a recommended
 - Q: What is it, in the template's formula — artifact + language/platform, input → output, positioning clause against the incumbent/gap?
 - Gate: if the positioning clause won't come, stop and work it out. Offer 2–3 candidate positionings you'd argue for, as options.
 - Q: The hero usage example — the single command/call demonstrating the core loop. Propose one; let the user correct it.
+- Repo URL (the `> Repo:` header): if the survey found a git remote, use it without asking. Otherwise ask once whether they already have a repo URL; if they don't, write a placeholder (`> Repo: <tbd>`) and propose an `owner/name` from the Phase 8 naming check — never fabricate a URL.
 - Trade-off probe: what is deliberately worse than the incumbent? (An MVP with no accepted weakness is an undefined MVP.)
 
 ## Phase 2 — Surfaces → *Surfaces table, "Usable as" bullets*
