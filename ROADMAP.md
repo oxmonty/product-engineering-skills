@@ -18,10 +18,10 @@ Usable as:
 
 ## Roadmap
 
-- [ ] **E1: Walking skeleton** — the skill installs through both planned channels and triggers end-to-end in a clean project. → [Distribution](docs/plans/2026-07-15-mvp-roadmap-prd.md#distribution)
+- [x] **E1: Walking skeleton** — the skill installs through both planned channels and triggers end-to-end in a clean project. → [Distribution](docs/plans/2026-07-15-mvp-roadmap-prd.md#distribution)
     - [x] Repo scaffold in superpowers layout: skills/mvp-roadmap/{SKILL.md, references/, assets/}, scripts/, tests/, MIT LICENSE, CLAUDE.md/AGENTS.md, README pointing at this roadmap
     - [x] CI validates SKILL.md frontmatter and Markdown on every PR
-    - [ ] Release workflow packages `mvp-roadmap.skill` and attaches it to a GitHub Release on tag
+    - [x] Release workflow packages `mvp-roadmap.skill` and attaches it to a GitHub Release on tag
     - [x] Verified install: `npx skills add monthy-app/mvp-roadmap` in a clean directory, skill triggers on "spec out this MVP"
 
 - [ ] **E2: Doc linter** — `scripts/check-doc.sh` mechanically enforces the document invariants the skill promises. → [Validation strategy](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
