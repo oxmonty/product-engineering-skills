@@ -5,7 +5,7 @@
 product-engineering-skills is a collection of agent skills (Agent Skills standard, Markdown) that carries a product from idea to shipped artifact. The entrypoint, `/mvp`, interviews you section-by-section into a decision-complete document set — a living `ROADMAP.md` and a dated PRD — and the companion skills run the build loop against those documents: `/epic` kicks off an epic from its spec, `/delegate` hands implementation down, `/demo-ideas` turns finished work into something showable, and `/wrap-up` closes the day with anti-accretive doc updates and propose-then-tick honesty. Unlike process-owning frameworks (BMAD, Spec-Kit) or full methodologies (superpowers), the collection owns the document and the loop around it — small, hackable skills producing a single source of truth.
 
 ```
-npx skills add oxmonty/product-engineering-skills   # install the collection
+npx skills add oxmonty/product-engineering-skills --all   # install the collection
 /mvp          # in any repo or empty dir: interview → ROADMAP.md + docs/plans/<date>-prd.md
 /epic E1      # kick off an epic against its PRD section
 /wrap-up      # close the day: propose ticks, update docs, summarize

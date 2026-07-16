@@ -7,7 +7,7 @@ A collection of agent skills (Agent Skills standard, Markdown) that carries a pr
 ## Install
 
 ```sh
-npx skills add oxmonty/product-engineering-skills
+npx skills add oxmonty/product-engineering-skills --all
 ```
 
 ## The loop
