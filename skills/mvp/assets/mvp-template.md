@@ -23,6 +23,7 @@ Usable as:
 > - **Epics** are task-list items `- [ ] **E<n>: Name** — outcome`, each a single sentence stating what is true when the epic is done — ordered by dependency, not by excitement.
 > - **Stories** are task-list one-liners indented under their epic: each independently shippable, verifiable, small enough for one PR, and tickable as work lands.
 > - **E1 is usually a walking skeleton**: the product installs through every planned distribution channel and runs end-to-end while doing almost nothing — this proves CI, releases, and packaging before any feature exists, and every later epic ships through pipes that already work.
+> - **Every epic above the MVP line ends in a shippable artifact** someone outside the session can touch — a pushed repo, a published package, a live URL, a cut release — named in the outcome line as the exit criterion. Below the line, epics name the **feedback loop** they open instead: who uses the thing and what signal you collect.
 > - Every epic (and story where useful) **links to the design subheading that specifies it** — the roadmap says *what and in what order*; the linked section says *how*. If a story has no section to link to, either the design is missing or the story is speculative.
 > - A horizontal rule marks the **MVP line**: everything above it constitutes the smallest releasable product; below is post-MVP, and "Future" items are considered-but-unscheduled.
 > - Keep the roadmap near the top of the doc — it doubles as the table of contents — and update links when headings change.

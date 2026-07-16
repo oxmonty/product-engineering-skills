@@ -1,11 +1,11 @@
 ---
-name: mvp-roadmap
-description: Interview the user section-by-section to create or update an MVP design document (roadmap + PRD) from a structured template. Use whenever the user wants to define, spec, plan, or document an MVP, side project, or new tool; asks to "fill in" or instantiate mvp.md / ROADMAP.md / PRD.md; wants to tick off roadmap items after completing work; or asks to update project docs after a change. Also use when the user says things like "let's spec this out", "grill me about this project", "update the roadmap", or "mark E2 done".
+name: mvp
+description: Interview the user section-by-section to create or update an MVP design document (roadmap + PRD) from a structured template, then hand off to the companion build-loop skills. Use whenever the user wants to define, spec, plan, or document an MVP, side project, or new tool; asks to "fill in" or instantiate mvp.md / ROADMAP.md / PRD.md; wants to tick off roadmap items after completing work; or asks to update project docs after a change. Also use when the user says things like "let's spec this out", "grill me about this project", "update the roadmap", or "mark E2 done".
 ---
 
 # MVP Doc
 
-Turn an idea into a decision-complete MVP document set — and keep that document set truthful as work lands. The bundled template (`assets/mvp-template.md`) defines the target structure; this skill defines the process.
+Turn an idea into a decision-complete MVP document set — and keep that document set truthful as work lands. The bundled template (`assets/mvp-template.md`) defines the target structure; this skill defines the process. It is the entrypoint of a collection: the documents it emits are what the companion skills (`/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`) run the build loop against.
 
 There are two modes. Detect which one applies before doing anything else:
 
@@ -44,10 +44,11 @@ Interviewing rules (these come from hard-won practice; the whole value of the sk
 The roadmap is derived, not interviewed. Once the design sections exist:
 
 1. Derive epics from the sections, ordered by dependency. E1 is a walking skeleton unless the user explicitly opts out — installs through every planned channel, runs end-to-end, does almost nothing.
-2. Cap epics at ~6 stories; split anything larger (and consider splitting its design section too).
-3. Every epic links to the design subheading that specifies it. A story with no section to link to means the design is missing or the story is speculative — flag it, don't silently include it.
-4. Propose the MVP line. Ask the user to confirm where it falls — this is the one roadmap question worth asking rather than inferring.
-5. Present the full roadmap for reorder/veto before writing it into the doc.
+2. **Artifact-first epics.** Every epic above the MVP line ends in a shippable artifact someone outside the session can touch — a pushed repo, a published package, a live URL, a cut release — named in the epic's outcome line as its exit criterion. Below the MVP line, epics name the feedback loop they open instead: who uses the thing and what signal you collect. The walking skeleton is the pattern, not the exception.
+3. Cap epics at ~6 stories; split anything larger (and consider splitting its design section too).
+4. Every epic links to the design subheading that specifies it. A story with no section to link to means the design is missing or the story is speculative — flag it, don't silently include it.
+5. Propose the MVP line. Ask the user to confirm where it falls — this is the one roadmap question worth asking rather than inferring.
+6. Present the full roadmap for reorder/veto before writing it into the doc.
 
 ### Step 3 — Choose the output shape
 
@@ -59,7 +60,20 @@ When splitting: `ROADMAP.md` gets the description, hero example, "Usable as" bul
 
 Ask the user which shape they want, with your recommendation, as the final interview question.
 
+## The journey (close every create-mode session with this)
+
+The documents are step one of a loop this collection runs end to end. After emitting the files, print the road ahead so the user knows the next command at each stage:
+
+1. `/epic E1` — kick off the first epic against its PRD section; the section is the spec, the epic ends in its named artifact.
+2. Build, using `/delegate` to hand implementation down while judgment stays in the main loop.
+3. `/demo-ideas` when an epic ships — every epic should end in something you can show someone.
+4. `/wrap-up` at the end of any working session — propose ticks with evidence, update the docs non-accretively, summarize.
+
+If a companion skill isn't installed in the target project, say so and do the equivalent inline rather than skipping the step.
+
 ## Update mode
+
+`/wrap-up` is the user-invoked face of this mode — reach for it at session end. The rules below also bind model-invoked doc edits mid-session.
 
 Read `references/editing-rules.md` before touching an existing doc — it contains the editing philosophy and the tick-off protocol. The two non-negotiables, summarized:
 

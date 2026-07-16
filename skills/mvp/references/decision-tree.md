@@ -61,7 +61,7 @@ Throughout: one decision point per question-tool call, always with a recommended
 
 ## Phase 9 — Roadmap synthesis → *Roadmap*  — derived, not interviewed
 
-Follow Step 2 in SKILL.md. The only questions: MVP-line placement, and confirmation of the epic order.
+Follow Step 2 in SKILL.md. The only questions: MVP-line placement, and confirmation of the epic order. Every epic above the MVP line carries a shippable artifact as its exit criterion (pushed repo, published package, live URL, cut release); epics below the line name the feedback loop they open (who uses it, what signal is collected).
 
 ## Phase 10 — Closing → *License, Open questions, output shape*
 
