@@ -42,16 +42,16 @@ Usable as:
     - [ ] Fixture: changed decision → owning section, linked stories, and echoes all rewritten; accretion grep comes back clean
     - [ ] Fixture: tick edit touches checkbox characters only (diff assertion)
 
-- [ ] **E5: /mvp entrypoint** — the flagship skill is the collection's front door, and its roadmaps are artifact-first. → [mvp (entrypoint)](docs/plans/2026-07-15-mvp-roadmap-prd.md#mvp-entrypoint)
-    - [ ] Skill payload lives at skills/mvp; `/mvp` triggers the interview
-    - [ ] Create mode closes by printing the journey: `/epic` → build with `/delegate` → `/demo-ideas` → `/wrap-up`
-    - [ ] Artifact-first roadmaps: pre-MVP epics name a shippable artifact as exit criterion, post-MVP epics name their feedback loop (template + synthesis rules)
-    - [ ] Clean install re-verified: `npx skills add oxmonty/product-engineering-skills` in a clean directory installs the collection
+- [x] **E5: /mvp entrypoint** — the flagship skill is the collection's front door, and its roadmaps are artifact-first. → [mvp (entrypoint)](docs/plans/2026-07-15-mvp-roadmap-prd.md#mvp-entrypoint)
+    - [x] Skill payload lives at skills/mvp; `/mvp` triggers the interview
+    - [x] Create mode closes by printing the journey: `/epic` → build with `/delegate` → `/demo-ideas` → `/wrap-up`
+    - [x] Artifact-first roadmaps: pre-MVP epics name a shippable artifact as exit criterion, post-MVP epics name their feedback loop (template + synthesis rules)
+    - [x] Clean install re-verified: `npx skills add oxmonty/product-engineering-skills` in a clean directory installs the collection
 
-- [ ] **E6: wrap-up skill** — one command closes a working session with honest documents. → [wrap-up](docs/plans/2026-07-15-mvp-roadmap-prd.md#wrap-up)
-    - [ ] skills/wrap-up: diff reality vs roadmap → propose ticks with executed evidence → confirmed ticks only, checkbox characters only
-    - [ ] Non-accretive doc updates including the open-questions decision log, then a chat summary of the session
-    - [ ] Offers the closing commit; recommends `/compact` rather than pretending to compact
+- [x] **E6: wrap-up skill** — one command closes a working session with honest documents. → [wrap-up](docs/plans/2026-07-15-mvp-roadmap-prd.md#wrap-up)
+    - [x] skills/wrap-up: diff reality vs roadmap → propose ticks with executed evidence → confirmed ticks only, checkbox characters only
+    - [x] Non-accretive doc updates including the open-questions decision log, then a chat summary of the session
+    - [x] Offers the closing commit; recommends `/compact` rather than pretending to compact
 
 ---
 *MVP line — E1–E6 ship as v0.1: the loop's core — `/mvp` writes the documents, `/wrap-up` keeps them truthful, the linter and evals prove both.*
