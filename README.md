@@ -12,6 +12,16 @@ npx skills add oxmonty/product-engineering-skills --all -g
 
 All five skills, every detected agent, user-level, no prompts. Drop `-g` to install into the current project instead (a hackable copy that travels with the repo).
 
+Two install philosophies, pick by how you want updates:
+
+- **Hackable copy** (skills.sh, above) — the skills are copied as plain Markdown into your project or home directory. Edit them freely; they're yours, and they never change under you.
+- **Managed bundle** (Claude Code plugin) — subscribe to the collection and pick up improvements as they ship:
+
+  ```
+  /plugin marketplace add oxmonty/product-engineering-skills
+  /plugin install product-engineering-skills@product-engineering-skills
+  ```
+
 ## The loop
 
 | Command | When | Does |
