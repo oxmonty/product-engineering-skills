@@ -37,7 +37,7 @@ check_accretion() {
     /^```/ { fence = !fence; next }
     fence          { next }
     /accretion-ok/ { next }
-    /no longer|previously|instead of the (old|previous)|used to|formerly|deprecated in favor|\(was |has been (removed|replaced)|as of (v|now)/ {
+    /no longer|previously|instead of the (old|previous)|used to([^a-z]|$)|formerly|deprecated in favor|\(was |has been (removed|replaced)|as of (v|now)/ {
       printf "%s:%d: accretion tell -> %s\n", F, NR, $0
     }
   ' "$1"

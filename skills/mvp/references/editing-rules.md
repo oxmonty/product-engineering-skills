@@ -50,7 +50,7 @@ A checked box is a claim: *this story is verifiably done*. The protocol keeps th
 After any edit, before presenting the result, scan the changed files:
 
 ```bash
-grep -nE "no longer|previously|instead of the (old|previous)|used to|formerly|deprecated in favor|\(was |has been (removed|replaced)|as of (v|now)" ROADMAP.md PRD.md MVP.md 2>/dev/null
+grep -nE "no longer|previously|instead of the (old|previous)|used to([^a-z]|$)|formerly|deprecated in favor|\(was |has been (removed|replaced)|as of (v|now)" ROADMAP.md PRD.md MVP.md 2>/dev/null
 ```
 
 Every hit in document *body* text is a candidate accretion — inspect it and rewrite unless it is genuinely specifying behavior (e.g., a deprecation *policy* in API versioning legitimately says "deprecated endpoints are removed after two minor versions"). When a hit is legitimate policy prose, mark the line with an HTML comment — `<!-- accretion-ok: reason -->` — so a mechanical linter (like `check-doc.sh`) can allowlist it instead of training readers to ignore failures. The check is a tripwire, not a ban list: absence of these phrases doesn't prove clean editing, and their presence isn't automatically wrong. The prime directive is the test; the grep just catches the common tells.
