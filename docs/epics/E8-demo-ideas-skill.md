@@ -4,5 +4,5 @@ Every shipped epic gets something showable; demo requests are the user-signal ch
 
 ## Stories
 
-- [ ] Reads Workflow + hero example + actual build state; proposes 2–3 demos with runnable steps
-- [ ] Placeholder skill replaced; description drops the not-yet-implemented notice
+- [x] Reads Workflow + hero example + actual build state; proposes 2–3 demos with runnable steps
+- [x] Placeholder skill replaced; description drops the not-yet-implemented notice

@@ -4,6 +4,6 @@
 
 ## Stories
 
-- [ ] Reads the epic and its linked section; decision-complete → execution kickoff (story order, artifact target, demo exit)
-- [ ] Gaps in the section → grill only the gaps, fold answers back non-accretively
-- [ ] Placeholder skill replaced; description drops the not-yet-implemented notice
+- [x] Reads the epic and its linked section; decision-complete → execution kickoff (story order, artifact target, demo exit)
+- [x] Gaps in the section → grill only the gaps, fold answers back non-accretively
+- [x] Placeholder skill replaced; description drops the not-yet-implemented notice

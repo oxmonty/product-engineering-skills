@@ -4,5 +4,5 @@ Implementation goes to the cheapest capable tier while judgment stays in the mai
 
 ## Stories
 
-- [ ] Tier-selection rules and verify-by-owner discipline as a full skill
-- [ ] Placeholder skill replaced; description drops the not-yet-implemented notice
+- [x] Tier-selection rules and verify-by-owner discipline as a full skill
+- [x] Placeholder skill replaced; description drops the not-yet-implemented notice
