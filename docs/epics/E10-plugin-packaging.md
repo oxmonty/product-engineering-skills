@@ -1,6 +1,6 @@
 # E10: Claude Code plugin packaging
 
-`.claude-plugin/` manifest and marketplace listing for subscribe-rather-than-fork installs. → [Distribution](../plans/2026-07-15-mvp-roadmap-prd.md#distribution)
+`.claude-plugin/` manifest and marketplace listing for subscribe-rather-than-fork installs. → [Distribution](../plans/2026-07-15-prd.md#distribution)
 
 ## Stories
 

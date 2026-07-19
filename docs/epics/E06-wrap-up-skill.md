@@ -1,6 +1,6 @@
 # E6: wrap-up skill
 
-One command closes a working session with honest documents. → [wrap-up](../plans/2026-07-15-mvp-roadmap-prd.md#wrap-up)
+One command closes a working session with honest documents. → [wrap-up](../plans/2026-07-15-prd.md#wrap-up)
 
 ## Stories
 

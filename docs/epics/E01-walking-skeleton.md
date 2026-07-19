@@ -1,6 +1,6 @@
 # E1: Walking skeleton
 
-The flagship skill installs through both planned channels and triggers end-to-end in a clean project. → [Distribution](../plans/2026-07-15-mvp-roadmap-prd.md#distribution)
+The flagship skill installs through both planned channels and triggers end-to-end in a clean project. → [Distribution](../plans/2026-07-15-prd.md#distribution)
 
 ## Stories
 

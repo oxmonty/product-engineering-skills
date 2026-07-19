@@ -1,6 +1,6 @@
 # E7: epic skill
 
-`/epic E<n>` kicks off an epic from its PRD section; dogfooding on this repo's own epics is the feedback loop. → [epic (kickoff)](../plans/2026-07-15-mvp-roadmap-prd.md#epic-kickoff)
+`/epic E<n>` kicks off an epic from its PRD section; dogfooding on this repo's own epics is the feedback loop. → [epic (kickoff)](../plans/2026-07-15-prd.md#epic-kickoff)
 
 ## Stories
 

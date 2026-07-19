@@ -6,7 +6,7 @@ Before any work, read in this order:
 
 1. `ROADMAP.md` — the epic index and MVP cut; it is the shared memory across sessions.
 2. `docs/epics/E<nn>-*.md` — one file per epic (zero-padded), stories, status, and the spec link. Read the file for any epic you touch.
-3. `docs/plans/2026-07-15-mvp-roadmap-prd.md` — the specification each epic links into.
+3. `docs/plans/2026-07-15-prd.md` — the specification each epic links into.
 4. `skills/mvp/references/editing-rules.md` — the rules for every edit to the docs above.
 
 Rules of engagement:

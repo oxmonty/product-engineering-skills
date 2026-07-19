@@ -1,6 +1,6 @@
 # E12: spike skill
 
-`/spike` settles one design question with measured evidence and a decision matrix folded into the PRD. → [spike](../plans/2026-07-15-mvp-roadmap-prd.md#spike)
+`/spike` settles one design question with measured evidence and a decision matrix folded into the PRD. → [spike](../plans/2026-07-15-prd.md#spike)
 
 ## Stories
 

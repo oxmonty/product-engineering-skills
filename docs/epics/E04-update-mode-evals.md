@@ -1,6 +1,6 @@
 # E4: Update-mode evals
 
-The tick protocol and edit propagation behave under test; they pin `/wrap-up`'s editing behavior. → [Update-mode workflow](../plans/2026-07-15-mvp-roadmap-prd.md#workflow)
+The tick protocol and edit propagation behave under test; they pin `/wrap-up`'s editing behavior. → [Update-mode workflow](../plans/2026-07-15-prd.md#workflow)
 
 ## Stories
 

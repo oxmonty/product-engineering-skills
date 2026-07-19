@@ -1,6 +1,6 @@
 # E13: regression skill
 
-`/regression` pins each epic's feature with a layered suite whose green run gates the tick. → [regression](../plans/2026-07-15-mvp-roadmap-prd.md#regression)
+`/regression` pins each epic's feature with a layered suite whose green run gates the tick. → [regression](../plans/2026-07-15-prd.md#regression)
 
 ## Stories
 

@@ -6,7 +6,7 @@ These rules govern every edit to an instantiated `MVP.md`, `ROADMAP.md`, or `PRD
 
 > When updating prose, replace obsolete text with accurate text rather than preserving the obsolete text and adding a correction. The final document should read as if it were written correctly from the beginning.
 
-This is a way of thinking, not a style rule. Before writing any edit, ask: *what would this sentence say if the author had known the current truth when they first wrote it?* Write that sentence. The reader of this document cares about what is true now; they do not care how it became true.
+This is a way of thinking, not a style rule. Before writing any edit, ask: *what would this sentence say if the author had known the current truth when they first wrote it?* Write that sentence. The reader of this document cares about what is true now; they do not care how it became true. (Background on the failure mode: [Accretive Editing](https://justindfuller.com/programming/accretive-editing).)
 
 Where change history legitimately belongs:
 

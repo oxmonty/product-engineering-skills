@@ -1,6 +1,6 @@
 # E11: Dogfooding sharpenings
 
-The loop absorbs the first round of field feedback: core-first walking skeletons, brownfield create mode, session-memory reads, and tightened exit criteria. → [Features](../plans/2026-07-15-mvp-roadmap-prd.md#features)
+The loop absorbs the first round of field feedback: core-first walking skeletons, brownfield create mode, session-memory reads, and tightened exit criteria. → [Features](../plans/2026-07-15-prd.md#features)
 
 ## Stories
 

@@ -1,6 +1,6 @@
 # E2: Doc linter
 
-`scripts/check-doc.sh` mechanically enforces the document invariants the skills promise. → [Validation strategy](../plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
+`scripts/check-doc.sh` mechanically enforces the document invariants the skills promise. → [Validation strategy](../plans/2026-07-15-prd.md#validation-strategy)
 
 ## Stories
 

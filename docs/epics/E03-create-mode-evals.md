@@ -1,6 +1,6 @@
 # E3: Create-mode evals
 
-Golden briefs prove the `/mvp` interview produces valid documents without hand-holding. → [Validation strategy](../plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)
+Golden briefs prove the `/mvp` interview produces valid documents without hand-holding. → [Validation strategy](../plans/2026-07-15-prd.md#validation-strategy)
 
 ## Stories
 

@@ -1,6 +1,6 @@
 # product-engineering-skills
 
-[![Latest release](https://img.shields.io/github/v/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
+[![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
 
 > The document is the product.
 
@@ -43,16 +43,16 @@ Each skill is also importable into claude.ai individually from the `.skill` bund
 ## Philosophy
 
 - **The document is the product.** One interview writes a decision-complete spec; the loop's skills are the only things allowed to edit it.
-- **Rewrite, don't accrete.** Obsolete text is replaced, not annotated; the spec reads as if written correctly from the start. The open-questions section doubles as the decision log.
+- **Rewrite, don't accrete.** Obsolete text is replaced, not annotated; the spec reads as if written correctly from the start ([why accretive editing rots documents](https://justindfuller.com/programming/accretive-editing)). The open-questions section doubles as the decision log.
 - **A checkbox is a claim.** Ticks need executed evidence and your confirmation, never an assertion that code "should work".
 - **Artifacts over intentions.** An epic isn't done when the code exists; it's done when there's something shippable to show.
 - **Prose, not runtime.** Portable to any file-and-text harness; it observes nothing and phones nowhere.
 
 ## Where things live
 
-- [`ROADMAP.md`](ROADMAP.md) — the epic index and MVP cut; the project's front page and living memory.
+- [`ROADMAP.md`](ROADMAP.md) — at the repo root: the epic index and MVP cut; the project's front page and living memory.
 - [`docs/epics/`](docs/epics/) — one zero-padded file per epic (`E01-…`): stories, status, spec link, and exit criteria.
-- [`docs/plans/2026-07-15-mvp-roadmap-prd.md`](docs/plans/2026-07-15-mvp-roadmap-prd.md) — the specification each epic links into.
+- [`docs/plans/2026-07-15-prd.md`](docs/plans/2026-07-15-prd.md) — the specification each epic links into.
 - [`docs/write-ups/`](docs/write-ups/) — a dated, append-only narrative per completed epic.
 - [`skills/`](skills/) — the collection: `mvp/`, `epic/`, `delegate/`, `spike/`, `regression/`, `demo-ideas/`, `wrap-up/`.
 

@@ -1,6 +1,6 @@
 # E5: /mvp entrypoint
 
-The flagship skill is the collection's front door, and its roadmaps are artifact-first. → [mvp (entrypoint)](../plans/2026-07-15-mvp-roadmap-prd.md#mvp-entrypoint)
+The flagship skill is the collection's front door, and its roadmaps are artifact-first. → [mvp (entrypoint)](../plans/2026-07-15-prd.md#mvp-entrypoint)
 
 ## Stories
 
