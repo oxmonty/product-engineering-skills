@@ -1,6 +1,6 @@
 # product-engineering-skills
 
-[![Downloads](https://badgen.net/github/assets-dl/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases) [![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
+[![skills.sh](https://skills.sh/b/oxmonty/product-engineering-skills)](https://skills.sh/oxmonty/product-engineering-skills) [![Downloads](https://img.shields.io/github/downloads/oxmonty/product-engineering-skills/total)](https://github.com/oxmonty/product-engineering-skills/releases) [![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
 
 > The document is the product.
 
