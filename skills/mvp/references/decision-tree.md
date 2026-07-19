@@ -58,10 +58,11 @@ Throughout: one decision point per question-tool call, always with a recommended
 - Do, don't ask: check name availability on the relevant registries; report findings in the Naming note.
 - Q (multi-select): channels — package registries, Homebrew, GHCR, curl-install.
 - Infer + confirm: release automation appropriate to the stack (e.g., release-please → tag → goreleaser), quality gates, versioning driver, secrets posture (recommend OIDC over long-lived tokens by default).
+- Infer + confirm: the first release tag — `0.1.0` by default (the 0.x major already signals instability); offer `0.1.0-alpha.1` only when staging toward a gated stable release.
 
 ## Phase 9 — Roadmap synthesis → *Roadmap*  — derived, not interviewed
 
-Follow Step 2 in SKILL.md. The only questions: MVP-line placement, and confirmation of the epic order. Every epic above the MVP line carries a shippable artifact as its exit criterion (pushed repo, published package, live URL, cut release); epics below the line name the feedback loop they open (who uses it, what signal is collected).
+Follow Step 2 in SKILL.md. The only questions: MVP-line placement, and confirmation of the epic order. On a brownfield repo (feature inventory in Step 0), E1 is characterization coverage of the existing baseline rather than a walking skeleton — see SKILL.md. Every epic above the MVP line carries a shippable artifact as its exit criterion (pushed repo, published package, live URL, cut release); epics below the line name the feedback loop they open (who uses it, what signal is collected).
 
 ## Phase 10 — Closing → *License, Open questions, output shape*
 

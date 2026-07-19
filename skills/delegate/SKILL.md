@@ -15,6 +15,8 @@ Premium tokens buy judgment — design, review, deciding what to change and how.
 
 When unsure which tier a task needs, the task is probably under-specified — sharpen the spec until the cheap tier can succeed, or keep it.
 
+Set the tier explicitly on every delegation — most harnesses default subagents to *inherit* the main model, which silently runs every delegated task at the premium tier. Label each task with its tier and a short name when spawning ("mid-tier: parser refactor") so the fan-out is followable from the outside.
+
 ## Protocol
 
 1. **Specify before delegating.** Exact files, the precise change, and the acceptance check the result must pass. A vague prompt to a cheap model is a rework generator that costs more than doing it yourself.

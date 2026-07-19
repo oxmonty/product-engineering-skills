@@ -2,7 +2,7 @@
 
 > Repo: https://github.com/oxmonty/product-engineering-skills
 
-product-engineering-skills is a collection of agent skills (Agent Skills standard, Markdown) that carries a product from idea to shipped artifact. The entrypoint, `/mvp`, interviews you section-by-section into a decision-complete document set — a living `ROADMAP.md` and a dated PRD — and the companion skills run the build loop against those documents: `/epic` kicks off an epic from its spec, `/delegate` hands implementation down, `/demo-ideas` turns finished work into something showable, and `/wrap-up` closes the day with anti-accretive doc updates and propose-then-tick honesty. Unlike process-owning frameworks (BMAD, Spec-Kit) or full methodologies (superpowers), the collection owns the document and the loop around it — small, hackable skills producing a single source of truth.
+product-engineering-skills is a collection of agent skills (Agent Skills standard, Markdown) that carries a product from idea to shipped artifact. The entrypoint, `/mvp`, interviews you section-by-section into a decision-complete document set — a living `ROADMAP.md` and a dated PRD — and the companion skills run the build loop against those documents: `/epic` kicks off an epic from its spec, `/delegate` hands implementation down, `/spike` settles design questions with measured evidence, `/demo-ideas` turns finished work into something showable, and `/wrap-up` closes the day with anti-accretive doc updates and propose-then-tick honesty. Unlike process-owning frameworks (BMAD, Spec-Kit) or full methodologies (superpowers), the collection owns the document and the loop around it — small, hackable skills producing a single source of truth.
 
 ```
 npx skills add oxmonty/product-engineering-skills --all -g   # install the collection
@@ -12,7 +12,7 @@ npx skills add oxmonty/product-engineering-skills --all -g   # install the colle
 ```
 
 Usable as:
-- **Claude Code skills**: user-invoked `/mvp`, `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`; update mode is also model-invoked for tick-offs and doc edits.
+- **Claude Code skills**: user-invoked `/mvp`, `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`; update mode is also model-invoked for tick-offs and doc edits.
 - **Packaged `.skill` bundles**: one per skill, attached to GitHub Releases for claude.ai import.
 - **Any Agent-Skills harness**: Codex and others, via the skills.sh installer.
 
@@ -36,5 +36,7 @@ Each epic's stories, status, and spec link live in its file under [`docs/epics/`
 - [x] **E8: demo-ideas skill** — every shipped epic gets something showable; demo requests are the user-signal channel. → [E8](docs/epics/E8-demo-ideas-skill.md)
 - [x] **E9: delegate skill** — implementation goes to the cheapest capable tier while judgment stays in the main loop. → [E9](docs/epics/E9-delegate-skill.md)
 - [x] **E10: Claude Code plugin packaging** — `.claude-plugin/` manifest and marketplace listing for subscribe-rather-than-fork installs. → [E10](docs/epics/E10-plugin-packaging.md)
+- [x] **E11: Dogfooding sharpenings** — the loop absorbs the first round of field feedback: core-first walking skeletons, brownfield create mode, session-memory reads, and tightened exit criteria. → [E11](docs/epics/E11-dogfooding-sharpenings.md)
+- [x] **E12: spike skill** — `/spike` settles one design question with measured evidence and a decision matrix folded into the PRD. → [E12](docs/epics/E12-spike-skill.md)
 
 **Future (considered, unscheduled)**: automated eval runs in CI via the skill-creator harness ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#validation-strategy)); Codex-native plugin manifest ([here](docs/plans/2026-07-15-mvp-roadmap-prd.md#distribution)).

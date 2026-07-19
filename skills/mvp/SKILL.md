@@ -5,7 +5,7 @@ description: Interview the user section-by-section to create or update an MVP de
 
 # MVP Doc
 
-Turn an idea into a decision-complete MVP document set — and keep that document set truthful as work lands. The bundled template (`assets/mvp-template.md`) defines the target structure; this skill defines the process. It is the entrypoint of a collection: the documents it emits are what the companion skills (`/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`) run the build loop against.
+Turn an idea into a decision-complete MVP document set — and keep that document set truthful as work lands. The bundled template (`assets/mvp-template.md`) defines the target structure; this skill defines the process. It is the entrypoint of a collection: the documents it emits are what the companion skills (`/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`) run the build loop against.
 
 There are two modes. Detect which one applies before doing anything else:
 
@@ -26,6 +26,14 @@ Never open with questions. First, gather everything answerable without the user:
 
 Then present a short "here's what I already know" summary and confirm it in one pass. Questions the codebase can answer are questions you don't ask — asking them erodes the user's trust that the interview is worth their time.
 
+### Existing codebases (brownfield)
+
+Create mode on a repo that already has working features changes the opening, not the process:
+
+- The Step 0 survey becomes a **feature inventory**: enumerate the core capabilities that already work (entry points, commands, endpoints) and confirm the list with the user before any interview question.
+- The document records that baseline as already-true specification, and the roadmap builds forward from it. There is no walking skeleton to build — the product already walks. E1 becomes the safety net instead: characterization tests that pin existing behavior before new epics change it. Ask (structured question) whether that regression coverage lands before new feature epics — recommend it whenever new work touches existing features.
+- If the user names only a single next feature, that's a story, not a roadmap. Apply the positioning gate: ask for their plan for the product — notes, ambitions, the next three things — and interview toward a full roadmap.
+
 ### Step 1 — Walk the decision tree
 
 Follow `references/decision-tree.md`. It maps interview phases to template sections in dependency order (identity → surfaces → workflow → validation → features/scope → API → structure → distribution/CI → roadmap synthesis). Read it now if you haven't.
@@ -43,9 +51,9 @@ Interviewing rules (these come from hard-won practice; the whole value of the sk
 
 The roadmap is derived, not interviewed. Once the design sections exist:
 
-1. Derive epics from the sections, ordered by dependency. E1 is a walking skeleton unless the user explicitly opts out — installs through every planned channel, runs end-to-end, does almost nothing.
+1. Derive epics from the sections, ordered by dependency. E1 is a walking skeleton unless the user explicitly opts out — and its spine is the product's core primitive: the first stories make the hero loop run end to end in its thinnest form ("start the app, see hello world"), the closing stories ship it through **one** real channel. Proving one deploy path early is the skeleton's point; the remaining channels are their own later epic, never E1 ballast in front of the core. (Brownfield repos skip the skeleton: E1 is characterization coverage — see above.)
 2. **Artifact-first epics.** Every epic above the MVP line ends in a shippable artifact someone outside the session can touch — a pushed repo, a published package, a live URL, a cut release — named in the epic's outcome line as its exit criterion. Below the MVP line, epics name the feedback loop they open instead: who uses the thing and what signal you collect. The walking skeleton is the pattern, not the exception.
-3. Cap epics at ~6 stories; split anything larger (and consider splitting its design section too).
+3. Cap epics at ~6 stories; split anything larger (and consider splitting its design section too). Stories lead with an action verb — "Add …", "Ship …", "Template …" — and stay within two sentences.
 4. Every epic links to the design subheading that specifies it. A story with no section to link to means the design is missing or the story is speculative — flag it, don't silently include it.
 5. Propose the MVP line. Ask the user to confirm where it falls — this is the one roadmap question worth asking rather than inferring.
 6. Present the full roadmap for reorder/veto before writing it into the doc.
@@ -58,7 +66,7 @@ Why split: the roadmap is high-churn state (ticked constantly) while the PRD is 
 
 When splitting: `ROADMAP.md` gets the description, hero example, "Usable as" bullets, and the roadmap itself (it doubles as the project's front page); `PRD.md` gets Workflow, Surfaces, Validation, Features, API design, Project structure, Distribution, CI/CD, Additional considerations, Competitive landscape, Tech stack, References, License, Open questions. Delete the template's instructional blockquotes and HTML comments from instantiated docs.
 
-A third shape exists for large roadmaps (~10+ epics, or several sessions ticking concurrently): `ROADMAP.md` becomes a thin index — epic order, one-line outcomes, and the MVP cut — and each epic's stories live in their own `docs/epics/E<n>-<slug>.md` alongside its spec link, so a tick's blast radius is one epic's file. Offer it only when those conditions actually hold; two files is the right default.
+A third shape exists for large roadmaps (~10+ epics, or several sessions ticking concurrently): `ROADMAP.md` becomes a thin index — epic order, one-line outcomes, and the MVP cut — and each epic's stories live in their own `docs/epics/E<n>-<slug>.md` alongside its spec link, so a tick's blast radius is one epic's file. Zero-pad the file prefix (`E01-`, `E02-`) so directory listings sort in epic order past E9. Offer it only when those conditions actually hold; two files is the right default.
 
 Ask the user which shape they want, with your recommendation, as the final interview question.
 
@@ -67,7 +75,7 @@ Ask the user which shape they want, with your recommendation, as the final inter
 The documents are step one of a loop this collection runs end to end. After emitting the files, print the road ahead so the user knows the next command at each stage:
 
 1. `/epic E1` — kick off the first epic against its PRD section; the section is the spec, the epic ends in its named artifact.
-2. Build, using `/delegate` to hand implementation down while judgment stays in the main loop.
+2. Build, using `/delegate` to hand implementation down while judgment stays in the main loop, and `/spike` when a design question blocks a story.
 3. `/demo-ideas` when an epic ships — every epic should end in something you can show someone.
 4. `/wrap-up` at the end of any working session — propose ticks with evidence, update the docs non-accretively, summarize.
 

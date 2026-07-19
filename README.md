@@ -10,7 +10,7 @@ A collection of agent skills (Agent Skills standard, Markdown) that carries a pr
 npx skills add oxmonty/product-engineering-skills --all -g
 ```
 
-All five skills, every detected agent, user-level, no prompts. Drop `-g` to install into the current project instead (a hackable copy that travels with the repo).
+All six skills, every detected agent, user-level, no prompts. Drop `-g` to install into the current project instead (a hackable copy that travels with the repo).
 
 Two install philosophies, pick by how you want updates:
 
@@ -29,6 +29,7 @@ Two install philosophies, pick by how you want updates:
 | `/mvp` | day zero, in any repo or empty dir | section-by-section interview → `ROADMAP.md` + `docs/plans/<date>-prd.md` |
 | `/epic E1` | starting an epic | kickoff from the epic's PRD section: story order, artifact target, demo exit |
 | `/delegate` | during the build | implementation to the cheapest capable model tier; judgment stays in the main loop |
+| `/spike` | a design question blocks a story | timeboxed measurement of the candidates → decision matrix → decision folded into the PRD |
 | `/demo-ideas` | an epic ships | 2–3 demos of the current state, with runnable steps |
 | `/wrap-up` | end of any session | propose ticks with evidence, non-accretive doc updates, summary, closing commit |
 
@@ -50,7 +51,7 @@ Each skill is also importable into claude.ai individually from the `.skill` bund
 - [`docs/epics/`](docs/epics/) — one file per epic: stories, status, and the spec link.
 - [`docs/plans/2026-07-15-mvp-roadmap-prd.md`](docs/plans/2026-07-15-mvp-roadmap-prd.md) — the specification each epic links into.
 - [`docs/write-ups/`](docs/write-ups/) — a dated, append-only narrative per completed epic.
-- [`skills/`](skills/) — the collection: `mvp/`, `epic/`, `delegate/`, `demo-ideas/`, `wrap-up/`.
+- [`skills/`](skills/) — the collection: `mvp/`, `epic/`, `delegate/`, `spike/`, `demo-ideas/`, `wrap-up/`.
 
 This repo is self-hosting: it maintains its own roadmap and PRD with the skills it ships.
 

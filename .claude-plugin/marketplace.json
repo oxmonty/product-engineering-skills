@@ -8,7 +8,7 @@
     {
       "name": "product-engineering-skills",
       "source": "./",
-      "description": "All five skills as one managed bundle: /mvp, /epic, /delegate, /demo-ideas, /wrap-up."
+      "description": "All six skills as one managed bundle: /mvp, /epic, /delegate, /spike, /demo-ideas, /wrap-up."
     }
   ]
 }

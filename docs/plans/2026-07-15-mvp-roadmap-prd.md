@@ -49,7 +49,7 @@ Each companion skill is specified in [Features](#features). Skills stay flat und
 
 | Surface | Primary user | What's on it |
 |---|---|---|
-| Claude Code skills | human dev | `/mvp` interview plus companions `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`; model-invoked for tick-offs and doc updates |
+| Claude Code skills | human dev | `/mvp` interview plus companions `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`; model-invoked for tick-offs and doc updates |
 | skills.sh install | human dev | `npx skills add oxmonty/product-engineering-skills` copies hackable versions of every skill into the project |
 | `.skill` release artifacts | claude.ai user | one packaged bundle per skill attached to GitHub Releases, importable via Save skill |
 | Other Agent-Skills harnesses | human dev | inherited for free via skills.sh; no harness-specific code |
@@ -69,19 +69,22 @@ Shipped as: `./scripts/check-doc.sh <files>` in CI, plus `tests/` run manually v
 ## Features
 
 ### mvp (entrypoint)
-The collection's front door, in two modes. Create mode is the phased interview specified in `references/decision-tree.md`: ten phases in dependency order, positioning-clause gate, propose-don't-ask trap elicitation, roadmap synthesized last with artifact-first epics — pre-MVP epics exit in a shippable artifact (pushed repo, published package, live URL, cut release), post-MVP epics name their feedback loop — and output shape as the final question. It closes by printing the journey: the companion command to run at each later stage. Update mode is anti-accretive editing per `references/editing-rules.md`: prime directive (rewrite as if written correctly from the beginning), edit propagation across section → linked stories → echoes, propose-then-tick with executed evidence, checkbox-only tick diffs; `/wrap-up` is its user-invoked face.
+The collection's front door, in two modes. Create mode is the phased interview specified in `references/decision-tree.md`: ten phases in dependency order, positioning-clause gate, propose-don't-ask trap elicitation, roadmap synthesized last with artifact-first epics — pre-MVP epics exit in a shippable artifact (pushed repo, published package, live URL, cut release), post-MVP epics name their feedback loop, E1 built core-primitive-first and shipping through one channel — and output shape as the final question. On a repo with working features, create mode opens with a feature inventory instead: the baseline is recorded as already-true specification, E1 becomes characterization coverage of it, and a single-feature request is pushed back into a full roadmap. It closes by printing the journey: the companion command to run at each later stage. Update mode is anti-accretive editing per `references/editing-rules.md`: prime directive (rewrite as if written correctly from the beginning), edit propagation across section → linked stories → echoes, propose-then-tick with executed evidence, checkbox-only tick diffs; `/wrap-up` is its user-invoked face.
 
 ### wrap-up
-Session close as one command: read the roadmap fully, diff reality against it, propose ticks with one line of executed evidence each (confirm via structured question; the user is the verifier of record), tick checkbox characters only, apply non-accretive updates including the open-questions decision log, offer an epic write-up (`docs/write-ups/E<n>-<slug>.md`, dated and append-only) when an epic completed that session, verify with check-doc.sh where the project has it, summarize in chat, offer the closing commit, and recommend `/compact` when the conversation has grown long — a skill cannot compact the conversation itself. Ships self-contained: the operative tick protocol is inlined so the copied skill carries no cross-skill file references.
+Session close as one command: read the roadmap fully, diff reality against it, propose ticks with one line of executed evidence each (confirm via structured question; the user is the verifier of record), tick checkbox characters only, apply non-accretive updates including the open-questions decision log, offer an epic write-up (`docs/write-ups/E<n>-<slug>.md`, dated and append-only, written to land for junior and senior engineers alike and naming what the work enables for developer and end user; spikes contribute their decision matrix) when an epic completed that session, verify with check-doc.sh where the project has it, summarize in chat, offer the closing commit, and recommend `/compact` when the conversation has grown long — a skill cannot compact the conversation itself — plus a fresh session for the next epic when one completed; the documents are the handoff. Ships self-contained: the operative tick protocol is inlined so the copied skill carries no cross-skill file references.
 
 ### epic (kickoff)
-`/epic E<n>` starts an epic from its spec rather than re-interviewing: read the epic and its linked PRD section; if the section is decision-complete, go straight to execution kickoff — story order, the artifact the epic exits with, the demo that proves it done; if it has gaps, grill only the gaps and fold the answers back non-accretively. It never asks what the PRD already answers.
+`/epic E<n>` starts an epic from its spec rather than re-interviewing: read the epic, its linked PRD section, and the write-ups of completed epics it builds on — in a fresh session those are the only memory of past decisions. If the section is decision-complete — and still true where it rests on external facts that age — go straight to execution kickoff: story order, the artifact the epic exits with, the regression checks it leaves behind, the demo that proves it done, and which stories go to `/delegate` or are really `/spike` questions. If it has gaps, grill only the gaps and fold the answers back non-accretively. It never asks what the PRD already answers, and built work is reviewed before `/wrap-up` proposes ticks.
 
 ### demo-ideas
 Reads the Workflow section, the hero example, and the actual build state, then proposes 2–3 demos sized to what exists today, each with runnable steps. Pre-MVP the demos prove the artifact is real — install it, hit the URL, run the hero command; post-MVP they are built to put the product in front of users and collect a signal.
 
 ### delegate
-Model-tier delegation with judgment kept in the main loop: specify the change precisely, hand implementation to the cheapest tier that can do the job well — a capable mid-tier model for substantive coding, the smallest for mechanical edits — and verify the result in the main loop: typecheck, lint, test, read the diff. The subagent only types.
+Model-tier delegation with judgment kept in the main loop: specify the change precisely, hand implementation to the cheapest tier that can do the job well — a capable mid-tier model for substantive coding, the smallest for mechanical edits — always setting the tier explicitly (harnesses default subagents to inherit the premium main model) and labeling each task with its tier, then verify the result in the main loop: typecheck, lint, test, read the diff. The subagent only types.
+
+### spike
+`/spike` buys a decision, not a feature: name the one question and the decision it blocks (an Open Questions entry), set a timebox and the metrics that settle it, build the throwaway minimum that produces real numbers, and record a decision matrix — options against measured criteria. The decision folds back per the editing rules (answer recorded on the question, owning section rewritten as if always true); the code is discarded by default — kept only if the user promotes it to real, reviewed code.
 
 ### Doc linter
 `scripts/check-doc.sh` extracts the collection's doc self-check into a standalone, CI-runnable script — usable by *target* projects too, which makes it the collection's only executable deliverable and its clearest differentiator.
@@ -89,7 +92,7 @@ Model-tier delegation with judgment kept in the main loop: specify the change pr
 **Deviation to explore:** superpowers and mattpocock's skills treat plan documents as write-once artifacts that downstream skills consume; this collection treats the document as the mutable system of record with enforced editing discipline. The measurable claim: a project maintained via update mode shows zero accretion-grep hits over its life, verified by the self-hosting gate on this repo.
 
 ### Scope
-**In scope:** the five skills (mvp, wrap-up, epic, demo-ideas, delegate), the doc linter, the eval suites, two install channels.
+**In scope:** the six skills (mvp, wrap-up, epic, demo-ideas, delegate, spike), the doc linter, the eval suites, two install channels.
 **Future work (considered, not scheduled):** plugin packaging (E10); CI-automated evals (manual runs are cheap at this scale).
 **Out of scope:** TDD orchestration, issue-tracker integration, hosting or deployment automation — superpowers and mattpocock's skills own the inner development process; this collection owns the document and the loop around it, stops at that boundary, and composes with them.
 
@@ -121,9 +124,9 @@ Principles: each SKILL.md stays under ~150 lines with depth pushed to references
 
 ## Distribution
 
-Channels: skills.sh (public repo with skills under `skills/` is the discoverable shape — the same layout mattpocock and superpowers ship), GitHub Releases carrying one packaged `.skill` bundle per skill for claude.ai import, and a Claude Code plugin marketplace hosted by this repo (`.claude-plugin/`): one bundled plugin carrying all five skills — the loop is designed to be used together, so the managed channel installs it whole rather than à la carte. Release automation: tag push → package each `skills/<name>/` → attach artifacts.
+Channels: skills.sh (public repo with skills under `skills/` is the discoverable shape — the same layout mattpocock and superpowers ship), GitHub Releases carrying one packaged `.skill` bundle per skill for claude.ai import, and a Claude Code plugin marketplace hosted by this repo (`.claude-plugin/`): one bundled plugin carrying all six skills — the loop is designed to be used together, so the managed channel installs it whole rather than à la carte. Release automation: tag push → package each `skills/<name>/` → attach artifacts.
 
-**Naming note:** the repo lives at `oxmonty/product-engineering-skills`; skills.sh addresses by `owner/repo`, so `npx skills add oxmonty/product-engineering-skills` is the whole install string and the repo path is the only thing it pins. The repo name names the domain; each skill keeps its own short invocation name (`/mvp`, `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`), clean as slash commands. No package-registry presence is planned, which removes the usual npm/PyPI check. Verified by the E5 clean-install story rather than by assertion.
+**Naming note:** the repo lives at `oxmonty/product-engineering-skills`; skills.sh addresses by `owner/repo`, so `npx skills add oxmonty/product-engineering-skills` is the whole install string and the repo path is the only thing it pins. The repo name names the domain; each skill keeps its own short invocation name (`/mvp`, `/epic`, `/demo-ideas`, `/wrap-up`, `/delegate`, `/spike`), clean as slash commands. No package-registry presence is planned, which removes the usual npm/PyPI check. Verified by the E5 clean-install story rather than by assertion.
 
 ## CI/CD
 

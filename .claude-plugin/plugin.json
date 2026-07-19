@@ -1,6 +1,6 @@
 {
   "name": "product-engineering-skills",
-  "description": "Idea to shipped artifact: /mvp interviews you into a living ROADMAP + PRD; /epic, /delegate, /demo-ideas, and /wrap-up run the build loop against those documents and keep them truthful.",
+  "description": "Idea to shipped artifact: /mvp interviews you into a living ROADMAP + PRD; /epic, /delegate, /spike, /demo-ideas, and /wrap-up run the build loop against those documents and keep them truthful.",
   "version": "0.2.0",
   "author": {
     "name": "oxmonty"
