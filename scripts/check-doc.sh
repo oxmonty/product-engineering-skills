@@ -75,6 +75,8 @@ check_structure() {
     [ "$stories" -gt 6 ] && printf "%s: structural -> %d stories (max 6)\n" "$file" "$stories"
     grep -qE '\]\((\.\./|docs/)plans/' "$file" \
       || printf "%s: structural -> no link into a plans/ section\n" "$file"
+    grep -qE '^## Stories$' "$file" \
+      || printf "%s: structural -> missing '## Stories' heading\n" "$file"
     return 0
   fi
   grep -qE '^- \[[ x]\] \*\*E[0-9]+' "$file" || return 0   # not a roadmap
