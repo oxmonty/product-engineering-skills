@@ -2,6 +2,8 @@
 
 [![skills.sh](https://badgen.net/badge/skills.sh/oxmonty%2Fproduct-engineering-skills/black?icon=vercel)](https://skills.sh/oxmonty/product-engineering-skills) [![Downloads](https://badgen.net/github/assets-dl/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases) [![Latest release](https://badgen.net/github/release/oxmonty/product-engineering-skills)](https://github.com/oxmonty/product-engineering-skills/releases/latest)
 
+> The document is the product: a living spec the skills keep truthful as you build.
+
 A collection of agent skills (Agent Skills standard, Markdown) that carries a product from idea to shipped artifact: an interview that produces a decision-complete MVP document set (a living `ROADMAP.md` and a dated PRD) and a build loop that runs against those documents and keeps them truthful as work lands.
 
 ## Install
