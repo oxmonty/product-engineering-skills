@@ -29,6 +29,8 @@ Compatibility: the skills are plain Agent Skills Markdown with no runtime, so an
 
 ## The loop
 
+Kick it off with `/mvp` and paste everything you have — product notes, feature lists, a half-formed idea. The more you hand the interview, the fewer questions it asks. An existing project or POC works too: brownfield repos get a feature inventory as the baseline.
+
 | Command | When | Does |
 |---|---|---|
 | `/mvp` | day zero, bare or existing repo | section-by-section interview → `ROADMAP.md` + `docs/plans/<date>-prd.md` + `docs/epics/`; brownfield repos get a feature-inventory baseline first |
